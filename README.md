@@ -158,4 +158,9 @@ Unit & integration tests (Jest + Supertest)
 API documentation (Swagger / OpenAPI)
 Rate limiting & helmet security headers
 
-
+License
+MIT
+Author
+mahmoud moselhy
+Capstone Project – 2026
+Happy coding!
