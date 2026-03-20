@@ -49,7 +49,7 @@ const loginUser = async (req , res)=>{
 
         const chackPass = await bcrypt.compare(password, user.password);
         if(!chackPass){
-           return res.status(400).json({message:"invalid pasword"})
+            return res.status(400).json({message:"invalid pasword"})
         };
 
         const token = createtoken(user._id, user.name, user.role)
@@ -67,4 +67,6 @@ const loginUser = async (req , res)=>{
 
 
 
-module.exports = { registerUser, loginUser };
+
+
+module.exports = { registerUser, loginUser};

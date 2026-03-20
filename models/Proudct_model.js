@@ -17,7 +17,6 @@ name:{type:String,
 
  slug: {
     type: String,
-    required: true,
     unique: true,
     lowercase: true,
     trim: true
@@ -66,7 +65,6 @@ name:{type:String,
 
   mainImage: {
     type: String,
-    required: true
   },
 
   rating: {
@@ -108,7 +106,7 @@ ProductSchema.pre("save", function () {
 
 // sluge for update 
 
-ProductSchema.pre("findOneAndUpdate", async function (next) {
+ProductSchema.pre("findOneAndUpdate", async function () {
 
   const update = this.getUpdate();
 
@@ -130,7 +128,7 @@ ProductSchema.pre("findOneAndUpdate", async function (next) {
   update.finalPrice = price - (price * discount) / 100;
 
   this.setUpdate(update);
-  next();
+
 });
 
 

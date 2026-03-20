@@ -28,7 +28,7 @@ const auth= async (req , res , next)=>{
 
     catch(error){
         // console.log(req.headers.token);
-        return res.status(401).json({message:"invaild token",error: error.message})
+        res.status(401).json({message:"invaild token",error: error.message})
     }
 
 

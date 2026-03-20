@@ -87,3 +87,34 @@ Please help me implement:
 2. Role authorization middleware
 3. Global error handler
 4. Then guide me step-by-step for Category CRUD API
+
+
+
+
+
+
+
+
+
+
+
+تقرير مشروع الـ User Authentication API
+1️⃣ Middleware
+النوع	الوضع الحالي	ملاحظات
+Logger	موجود (logger.js)	يسجل كل request، بس حاليًا basic fs append. ممكن تحسن بإضافة status code + duration (حاليًا في النسخة الأخيرة اللي صححتها).
+Validation	موجود (registerValidation, loginValidation)	شغال كويس مع Joi. بعد التصحيح أضفنا next() عشان request ما يعلقش.
+Error Handler	موجود (error_handelar.js)	يطبع الخطأ في console + JSON response. ممكن تحسن بإضافة كتابة log في ملف أو استخدام Winston.
+2️⃣ Routes / Controllers
+Route	Controller	الوضع الحالي	ملاحظات
+POST /api/users/register	registerUser	شغال	بعد التصحيح: return بعد رسائل الخطأ، password مشفر بـ bcrypt، JWT مولد.
+POST /api/users/login	loginUser	شغال	بعد التصحيح: return بعد الأخطاء، password مقارنة صحيحة، JWT مولد.
+GET /api/users/...	أي route	لم يتم ذكر	تأكد أي route بيرجع response وإلا Postman هيقف loading.
+3️⃣ Security
+البند	الوضع الحالي	ملاحظات
+Password hashing	bcrypt	شغال. ممكن تزيد saltRounds لمزيد الأمان.
+JWT	موجود	شغال، تأكد secret قوي + expiry مضبوط.
+Response cleanup	جزئي	حالياً بيرجع كل الـ user object مع password. يفضل نعمل exclude للـ password من response.
+4️⃣ Database
+البند	الوضع الحالي	ملاحظات
+MongoDB	متصل	اتأكد MONGO_URI صحيح وDB شغالة.
+Error handling	جزئي	لو DB مش متصلة أو query تفشل، Error Handler يمسكها.

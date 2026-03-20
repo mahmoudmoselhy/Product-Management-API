@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const slugify = require("slugify");
 
-export const CategorySchema = new mongoose.Schema({
+const CategorySchema = new mongoose.Schema({
 
  
 
@@ -61,7 +61,7 @@ CategorySchema.pre("save",  function() {
 
 
 // sluge for update 
-CategorySchema.pre("findOneAndUpdate",  function (next) {
+CategorySchema.pre("findOneAndUpdate",  function () {
 
   const update = this.getUpdate();
 
@@ -74,7 +74,6 @@ CategorySchema.pre("findOneAndUpdate",  function (next) {
   }
 
   this.setUpdate(update);
-  next();
 });
 
 

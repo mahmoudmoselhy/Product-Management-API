@@ -1,0 +1,70 @@
+2026-03-19T08:52:33.322Z - Converting circular structure to JSON
+    --> starting at object with constructor 'MongoClient'
+    |     property 's' -> object with constructor 'Object'
+    |     property 'sessionPool' -> object with constructor 'ServerSessionPool'
+    --- property 'client' closes the circle
+2026-03-19T10:00:48.555Z - Cannot set headers after they are sent to the client
+2026-03-19T10:32:44.438Z - Cannot access 'user' before initialization
+2026-03-19T15:07:57.109Z - E11000 duplicate key error collection: product-management-db.categories index: slug_1 dup key: { slug: "cib-il" }
+2026-03-19T15:25:37.150Z - chackSlug is not defined
+2026-03-19T15:37:31.633Z - Category.findOneById is not a function
+2026-03-19T15:42:28.449Z - Cast to ObjectId failed for value "cib" (type string) at path "_id" for model "Category"
+2026-03-19T15:47:52.649Z - Cast to ObjectId failed for value "cib" (type string) at path "_id" for model "Category"
+2026-03-19T15:47:57.927Z - Cast to ObjectId failed for value "cib" (type string) at path "_id" for model "Category"
+2026-03-19T15:52:59.748Z - next is not a function
+2026-03-19T15:57:31.074Z - next is not a function
+2026-03-19T15:57:48.870Z - next is not a function
+2026-03-19T16:01:41.577Z - categoryID is not defined
+2026-03-19T16:03:46.307Z - next is not a function
+2026-03-19T16:17:51.174Z - next is not a function
+2026-03-19T16:17:55.630Z - next is not a function
+2026-03-19T16:23:20.102Z - next is not a function
+2026-03-19T16:25:21.040Z - next is not a function
+2026-03-19T16:25:33.490Z - next is not a function
+2026-03-19T16:26:56.449Z - next is not a function
+2026-03-19T16:26:58.982Z - next is not a function
+2026-03-19T16:29:17.248Z - next is not a function
+2026-03-19T16:29:19.770Z - next is not a function
+2026-03-19T16:30:30.571Z - next is not a function
+2026-03-19T16:30:40.859Z - next is not a function
+2026-03-19T16:49:01.932Z - next is not a function
+2026-03-19T16:49:06.824Z - next is not a function
+2026-03-19T16:49:39.650Z - next is not a function
+2026-03-19T22:44:42.071Z - next is not a function
+2026-03-19T22:48:31.386Z - next is not a function
+2026-03-19T22:48:44.511Z - next is not a function
+2026-03-19T22:51:25.717Z - next is not a function
+2026-03-19T23:15:48.854Z - next is not a function
+2026-03-19T23:16:31.236Z - next is not a function
+2026-03-19T23:17:12.328Z - next is not a function
+2026-03-19T23:18:07.128Z - next is not a function
+2026-03-19T23:23:02.656Z - next is not a function
+2026-03-19T23:27:19.306Z - next is not a function
+2026-03-19T23:27:26.665Z - next is not a function
+2026-03-19T23:28:58.066Z - next is not a function
+2026-03-19T23:29:36.969Z - Unexpected token } in JSON at position 124
+2026-03-19T23:29:46.609Z - next is not a function
+2026-03-19T23:30:08.390Z - next is not a function
+2026-03-19T23:34:13.204Z - category is not defined
+2026-03-19T23:40:16.836Z - next is not a function
+2026-03-20T00:42:20.918Z - Cannot read properties of undefined (reading 'id')
+2026-03-20T00:53:28.888Z - joi.String is not a function
+2026-03-20T01:21:36.865Z - Cannot read properties of undefined (reading 'id')
+2026-03-20T01:21:55.144Z - Cannot read properties of undefined (reading 'id')
+2026-03-20T01:22:38.933Z - Cannot read properties of undefined (reading 'id')
+2026-03-20T01:23:20.937Z - Cannot read properties of undefined (reading 'id')
+2026-03-20T01:23:36.628Z - Cannot read properties of undefined (reading 'slug')
+2026-03-20T01:30:45.607Z - Cannot read properties of undefined (reading 'slug')
+2026-03-20T01:31:06.533Z - Cannot read properties of undefined (reading 'id')
+2026-03-20T01:33:48.961Z - slug is not defined
+2026-03-20T01:34:51.655Z - slug is not defined
+2026-03-20T01:34:54.841Z - slug is not defined
+2026-03-20T01:44:48.285Z - exustProductS is not defined
+2026-03-20T01:45:05.377Z - exustProductS is not defined
+2026-03-20T01:46:06.059Z - exustProductS is not defined
+2026-03-20T01:56:07.610Z - joi.array(...).string is not a function
+2026-03-20T01:56:37.541Z - joi.string(...).array is not a function
+2026-03-20T02:13:59.593Z - next is not a function
+2026-03-20T02:27:28.073Z - Product.finByIdAndDelete is not a function
+2026-03-20T02:27:58.798Z - res.staus is not a function
+2026-03-20T02:42:03.757Z - Cannot read properties of undefined (reading 'id')
