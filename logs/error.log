@@ -68,3 +68,10 @@
 2026-03-20T02:27:28.073Z - Product.finByIdAndDelete is not a function
 2026-03-20T02:27:58.798Z - res.staus is not a function
 2026-03-20T02:42:03.757Z - Cannot read properties of undefined (reading 'id')
+2026-03-22T19:20:47.410Z - Cannot set headers after they are sent to the client
+2026-03-22T19:27:49.369Z - Cannot set headers after they are sent to the client
+2026-03-22T19:33:02.928Z - Cannot set headers after they are sent to the client
+2026-03-22T19:33:06.343Z - Cannot set headers after they are sent to the client
+2026-03-22T19:35:04.619Z - Cannot set headers after they are sent to the client
+2026-03-22T23:34:11.983Z - res is not defined
+2026-03-22T23:34:38.653Z - res is not defined

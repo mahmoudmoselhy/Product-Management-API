@@ -13,7 +13,7 @@ const registerUser = async (req , res)=>{
         }
         const existUser = await User.findOne({email});
         if(existUser){
-            res.status(400).json({message:"your email is alrady exist"});
+        return res.status(400).json({message:"your email is alrady exist"});
         }
 
 
@@ -64,9 +64,39 @@ const loginUser = async (req , res)=>{
 
 
 
+const myAccount= async (req , res ,next)=>{
+
+try{
+
+    const user = await User.findById(req.user.id).select("-password");
+
+    if(!user){
+        return res.status(404).json({message:"please login to open your account"})
+    }
+
+    res.status(200).json({user})
 
 
+}
+catch(error){
+    next(error)
+}
+
+}
 
 
+const editMyAccount = async (req ,res , next)=>{
+    try{
+        const {name , email ,phone , age ,address  } = req.body
+        const user = await User.findByIdAndUpdate(req.user.id,{name , email ,phone , age ,address  },{new:true})
+        if(!user){
+        return res.status(404).json({message:"please login to open your account"})
+    }
+    res.status(201).json({message:"account updated",user});
+    }
+    catch(error){
+        next(error)
+    }
+}
 
-module.exports = { registerUser, loginUser};
+module.exports = { registerUser, loginUser ,myAccount ,editMyAccount};
