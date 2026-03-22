@@ -1,0 +1,640 @@
+{
+  "info": {
+    "_postman_id": "b236ecc9-6fc3-4e6c-8125-6e9b8d0ee4b4",
+    "name": "Product-Management-API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "31833734"
+  },
+  "item": [
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "get all users",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJiYzk1ODEzMjM0MzlmMDVlYzc4MzciLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM5MTYzMjcsImV4cCI6MTc3NjUwODMyN30.nHFrxJWq1ECLxzcm0cn6HJIVUXp0fDSfRmKqjf-4Uec",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}{{admin}}/users",
+              "host": [
+                "{{base}}{{admin}}"
+              ],
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create user",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJiYzk1ODEzMjM0MzlmMDVlYzc4MzciLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM5MTYzMjcsImV4cCI6MTc3NjUwODMyN30.nHFrxJWq1ECLxzcm0cn6HJIVUXp0fDSfRmKqjf-4Uec",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"new\",\r\n    \"email\":\"new@test.com\",\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"1234567\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{admin}}/create-user",
+              "host": [
+                "{{base}}{{admin}}"
+              ],
+              "path": [
+                "create-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update user",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJiYzk1ODEzMjM0MzlmMDVlYzc4MzciLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM5MTYzMjcsImV4cCI6MTc3NjUwODMyN30.nHFrxJWq1ECLxzcm0cn6HJIVUXp0fDSfRmKqjf-4Uec",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n       \r\n        \"name\": \"mahmoud\",\r\n        \"email\": \"mahmoud@test.com\",\r\n        \"role\": \"user\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{admin}}/update-user/69bae1800b36093ba6865a21",
+              "host": [
+                "{{base}}{{admin}}"
+              ],
+              "path": [
+                "update-user",
+                "69bae1800b36093ba6865a21"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete user",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJiYzk1ODEzMjM0MzlmMDVlYzc4MzciLCJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NzM5MTYzMjcsImV4cCI6MTc3NjUwODMyN30.nHFrxJWq1ECLxzcm0cn6HJIVUXp0fDSfRmKqjf-4Uec",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}{{admin}}/delete-user/69bbd2c2d43b535fcc8080bd",
+              "host": [
+                "{{base}}{{admin}}"
+              ],
+              "path": [
+                "delete-user",
+                "69bbd2c2d43b535fcc8080bd"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "categories",
+      "item": [
+        {
+          "name": "get all category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}{{categories}}",
+              "host": [
+                "{{base}}{{categories}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "",
+                "value": "",
+                "type": "text"
+              },
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"access\" , \r\n    \"description\" :\"dj ljfklsj klsjfkl sklfsl jfkldfjskl f\" , \r\n    \"slug\" : \"acc\", \r\n    \"parentCategory\":\"69bc0f932b878e21383bc973\",\r\n    \"isActive\": \"true\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{categories}}/create-category",
+              "host": [
+                "{{base}}{{categories}}"
+              ],
+              "path": [
+                "create-category"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get category by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}{{categories}}/69bc10f8efe489eb6fcdba8f",
+              "host": [
+                "{{base}}{{categories}}"
+              ],
+              "path": [
+                "69bc10f8efe489eb6fcdba8f"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get category by slug",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}{{categories}}/slug/cib",
+              "host": [
+                "{{base}}{{categories}}"
+              ],
+              "path": [
+                "slug",
+                "cib"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update catories",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\r\n        \"name\": \"classic\",\r\n        \"slug\": \"cliss\",\r\n        \"parentCategory\": \"69bc0f932b878e21383bc973\"\r\n\r\n    }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{categories}}/update/69bc836f801c137a63a9725e",
+              "host": [
+                "{{base}}{{categories}}"
+              ],
+              "path": [
+                "update",
+                "69bc836f801c137a63a9725e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete category",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}{{categories}}/delete/69bc159e818cc60f6a3b2af7",
+              "host": [
+                "{{base}}{{categories}}"
+              ],
+              "path": [
+                "delete",
+                "69bc159e818cc60f6a3b2af7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload category image",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "uuid": "92ec97c9-3b6c-43c7-8106-37d844eab0e3",
+                  "src": "/C:/Users/mahmo/Downloads/Arabic 01.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base}}{{categories}}/69bc0f932b878e21383bc973/upload-image?authorization={{authorization}}",
+              "host": [
+                "{{base}}{{categories}}"
+              ],
+              "path": [
+                "69bc0f932b878e21383bc973",
+                "upload-image"
+              ],
+              "query": [
+                {
+                  "key": "authorization",
+                  "value": "{{authorization}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "get all products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}{{products}}",
+              "host": [
+                "{{base}}{{products}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get product by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}{{products}}/69bca71c691d43299b168aac",
+              "host": [
+                "{{base}}{{products}}"
+              ],
+              "path": [
+                "69bca71c691d43299b168aac"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get product by slug",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base}}{{products}}/slug/test",
+              "host": [
+                "{{base}}{{products}}"
+              ],
+              "path": [
+                "slug",
+                "test"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "create product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\":\"test3\" , \r\n\"description\":\"kdfsl jfldjl kfkljfklsdjklf js\" , \r\n\"price\" :\"44\", \r\n\"category\":\"69bc0f932b878e21383bc973\" , \r\n\"slug\" :\"test3\",\r\n\"discount\" :\"10\", \r\n\"isActive\":true,\r\n\"stock\":\"14\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{products}}/create-product",
+              "host": [
+                "{{base}}{{products}}"
+              ],
+              "path": [
+                "create-product"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\":\"test1\" , \r\n\"description\":\"kdfsl jfldjl kfkljfklsdjklf js\" , \r\n\"price\" :\"242\", \r\n\"category\":\"69bc0f932b878e21383bc973\" , \r\n\"slug\" :\"test1\",\r\n\"discount\" :\"10\", \r\n\"isActive\":true,\r\n\"stock\":\"14\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{products}}/update-product/69bca12d178f006bad899dc7",
+              "host": [
+                "{{base}}{{products}}"
+              ],
+              "path": [
+                "update-product",
+                "69bca12d178f006bad899dc7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete product",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"name\":\"test3\" , \r\n\"description\":\"kdfsl jfldjl kfkljfklsdjklf js\" , \r\n\"price\" :\"44\", \r\n\"category\":\"69bc0f932b878e21383bc973\" , \r\n\"slug\" :\"test3\",\r\n\"discount\" :\"10\", \r\n\"isActive\":true,\r\n\"stock\":\"14\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{products}}/delete-product/69bca71c691d43299b168aac",
+              "host": [
+                "{{base}}{{products}}"
+              ],
+              "path": [
+                "delete-product",
+                "69bca71c691d43299b168aac"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "upload main image",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "mainImage",
+                  "type": "file",
+                  "uuid": "35b44e89-bfd7-438d-aaf5-e48b64b75531",
+                  "src": "/C:/Users/mahmo/Downloads/WhatsApp Image 2026-02-26 at 2.23.25 PM.jpeg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "{{base}}{{products}}/upload-img/69bca12d178f006bad899dc7",
+              "host": [
+                "{{base}}{{products}}"
+              ],
+              "path": [
+                "upload-img",
+                "69bca12d178f006bad899dc7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "login/register",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"admin@test.com\",\r\n    \"password\":\"1234567\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{user}}/login",
+              "host": [
+                "{{base}}{{user}}"
+              ],
+              "path": [
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"admin\",\r\n    \"email\":\"admin@test.com\",\r\n    \"password\":\"1234567\",\r\n    \"confirmPassword\":\"1234567\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{user}}/register",
+              "host": [
+                "{{base}}{{user}}"
+              ],
+              "path": [
+                "register"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "auth",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJhZTE4MDBiMzYwOTNiYTY4NjVhMjEiLCJuYW1lIjoibWFobW91ZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzczODgwMTg5LCJleHAiOjE3NzY0NzIxODl9.KqgRq9rC_u711OLb8x1Kc4JEoQAxAmi8-Z9G9kSq0cw",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "{{base}}{{products}}",
+          "host": [
+            "{{base}}{{products}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base",
+      "value": ""
+    },
+    {
+      "key": "user",
+      "value": ""
+    },
+    {
+      "key": "cat",
+      "value": ""
+    },
+    {
+      "key": "pro",
+      "value": ""
+    },
+    {
+      "key": "admin",
+      "value": ""
+    },
+    {
+      "key": "categories",
+      "value": ""
+    },
+    {
+      "key": "products",
+      "value": ""
+    },
+    {
+      "key": "authorization",
+      "value": ""
+    }
+  ]
+}
