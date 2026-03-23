@@ -504,6 +504,68 @@
       "name": "login/register",
       "item": [
         {
+          "name": "my account",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "{{authorization}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base}}{{user}}/me?=",
+              "host": [
+                "{{base}}{{user}}"
+              ],
+              "path": [
+                "me"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit my account",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "authorization",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJhZTE4MDBiMzYwOTNiYTY4NjVhMjEiLCJuYW1lIjoibWFobW91ZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc0MjIyMDg1LCJleHAiOjE3NzY4MTQwODV9.Lund9cTXfKbzyT1cobXBVuEamsjDn_iBOVxEJQKLct8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\r\n{\"email\": \"mahmoud@test.com\"\r\n            \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base}}{{user}}/editme",
+              "host": [
+                "{{base}}{{user}}"
+              ],
+              "path": [
+                "editme"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "login",
           "request": {
             "method": "POST",
@@ -556,27 +618,6 @@
           "response": []
         }
       ]
-    },
-    {
-      "name": "auth",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "authorization",
-            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyaWQiOiI2OWJhZTE4MDBiMzYwOTNiYTY4NjVhMjEiLCJuYW1lIjoibWFobW91ZCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzczODgwMTg5LCJleHAiOjE3NzY0NzIxODl9.KqgRq9rC_u711OLb8x1Kc4JEoQAxAmi8-Z9G9kSq0cw",
-            "type": "text",
-            "disabled": true
-          }
-        ],
-        "url": {
-          "raw": "{{base}}{{products}}",
-          "host": [
-            "{{base}}{{products}}"
-          ]
-        }
-      },
-      "response": []
     }
   ],
   "event": [
